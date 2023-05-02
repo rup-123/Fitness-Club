@@ -4,7 +4,6 @@ import Pagination  from '@mui/material/Pagination';
 import {Box,Stack,Typography} from '@mui/material';
 
 import {options,fetchData} from '../utils/fetchData';
-import { FaxRounded } from '@mui/icons-material';
 import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({exercises,setExercises,bodyPart}) => {
@@ -34,7 +33,8 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
     }
 
     fetchExercisesData();
-  },[bodyPart])
+  },[bodyPart,setExercises])
+
   return (
     <Box id="exercises" sx={{mt:{lg:'110px'}}} mt="50px" p="20px">
       <Typography variant="h3" mb="46px">
